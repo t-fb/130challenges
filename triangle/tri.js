@@ -12,6 +12,12 @@ class Triangle {
   kind() {
     if (this.s1 === this.s2 && this.s1 === this.s3) {
       return "equilateral";
+    } else if (
+      this.s1 === this.s2 ||
+      this.s1 === this.s3 ||
+      this.s2 === this.s3
+    ) {
+      return "isosceles";
     }
   }
 }
