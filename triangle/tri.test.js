@@ -69,19 +69,19 @@ describe("Triangle", () => {
     }).toThrow();
   });
 
-  xtest("triangles violating triangle inequality are illegal 2", () => {
+  test("triangles violating triangle inequality are illegal 2", () => {
     expect(() => {
       new Triangle(7, 3, 2);
     }).toThrow();
   });
 
-  xtest("triangles violating triangle inequality are illegal 3", () => {
+  test("triangles violating triangle inequality are illegal 3", () => {
     expect(() => {
       new Triangle(10, 1, 3);
     }).toThrow();
   });
 
-  xtest("triangles violating triangle inequality are illegal 4", () => {
+  test("triangles violating triangle inequality are illegal 4", () => {
     expect(() => {
       new Triangle(1, 1, 2);
     }).toThrow();

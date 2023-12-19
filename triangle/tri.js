@@ -6,9 +6,9 @@ class Triangle {
 
     if (
       [...arguments].some((side) => side <= 0) ||
-      s1 + s2 < s3 ||
-      s1 + s3 < s2 ||
-      s2 + s3 < s1
+      s1 + s2 <= s3 ||
+      s1 + s3 <= s2 ||
+      s2 + s3 <= s1
     ) {
       throw new Error("Invalid sides!");
     }
