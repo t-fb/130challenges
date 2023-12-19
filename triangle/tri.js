@@ -18,6 +18,8 @@ class Triangle {
       this.s2 === this.s3
     ) {
       return "isosceles";
+    } else {
+      return "scalene";
     }
   }
 }
