@@ -20,12 +20,12 @@ result = ''
 currentNum = 27
 
 iterate through roman object
-- if `currentNum` length is equal to `roman` value length AND is less than or equal to `roman` value 
+- if `currentNum` length is equal to `roman` value length AND is more than or equal to `roman` value 
   - let repeat =  round down dividing current num with roman value
   - append roman key to `result` repeat times
-  - assign currentNum the remainder 
+  - assign currentNum : currentNum - `repeatTimes` - value 
 
-
+  return `result`
 */
 
 class RomanNumeral {
@@ -55,23 +55,22 @@ class RomanNumeral {
     while (currentNum !== 0) {
       for (let romanKey in RomanNumeral.ROMAN_NUMERALS) {
         let value = RomanNumeral.ROMAN_NUMERALS[romanKey];
+        console.log(currentNum, value);
 
         if (
           String(value).length === String(currentNum).length &&
-          currentNum <= value
+          currentNum >= value
         ) {
           let repeatTimes = Math.floor(currentNum / value);
 
           roman += romanKey.repeat(repeatTimes);
-          currentNum = Math.floor(currentNum / value);
+          currentNum -= repeatTimes * value;
         }
       }
-    }
 
-    return roman;
+      return roman;
+    }
   }
 }
 
-// 27 => 7
-let number = new RomanNumeral(27);
-console.log(number.toRoman());
+module.exports = RomanNumeral;
