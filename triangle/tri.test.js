@@ -51,19 +51,19 @@ describe("Triangle", () => {
     expect(triangle.kind()).toEqual("scalene");
   });
 
-  xtest("test triangles with no size are illegal", () => {
+  test("test triangles with no size are illegal", () => {
     expect(() => {
       new Triangle(0, 0, 0);
     }).toThrow();
   });
 
-  xtest("triangles with negative sides are illegal", () => {
+  test("triangles with negative sides are illegal", () => {
     expect(() => {
       new Triangle(3, 4, -5);
     }).toThrow();
   });
 
-  xtest("triangles violating triangle inequality are illegal", () => {
+  test("triangles violating triangle inequality are illegal", () => {
     expect(() => {
       new Triangle(1, 1, 3);
     }).toThrow();

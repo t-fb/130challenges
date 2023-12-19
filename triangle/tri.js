@@ -4,7 +4,12 @@ class Triangle {
     this.s2 = s2;
     this.s3 = s3;
 
-    if ([s1, s2, s3].some((side) => side <= 0)) {
+    if (
+      [...arguments].some((side) => side <= 0) ||
+      s1 + s2 < s3 ||
+      s1 + s3 < s2 ||
+      s2 + s3 < s1
+    ) {
       throw new Error("Invalid sides!");
     }
   }
