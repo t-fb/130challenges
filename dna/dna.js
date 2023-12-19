@@ -9,7 +9,7 @@ class DNA {
     let otherStrand = other;
     let difference = 0;
 
-    if (other.length < this.dna) {
+    if (other.length < this.dna.length) {
       shorterStrand = other;
       otherStrand = [...this.dna];
     }
