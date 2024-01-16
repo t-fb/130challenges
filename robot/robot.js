@@ -10,7 +10,7 @@ class Robot {
     let nums = "";
 
     for (let count = 0; count < 3; count++) {
-      nums += allNums[Robot._randomIndex(10)];
+      nums += allNums[Robot._randomIndex(allNums.length)];
     }
 
     return nums;
@@ -20,7 +20,7 @@ class Robot {
     let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let letters = "";
     for (let count = 0; count < 2; count++) {
-      letters += alphabet[Robot._randomIndex(26)];
+      letters += alphabet[Robot._randomIndex(alphabet.length)];
     }
 
     return letters;
