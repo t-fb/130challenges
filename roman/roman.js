@@ -55,7 +55,6 @@ class RomanNumeral {
     while (currentNum !== 0) {
       for (let romanKey in RomanNumeral.ROMAN_NUMERALS) {
         let value = RomanNumeral.ROMAN_NUMERALS[romanKey];
-        console.log(currentNum, value);
 
         if (
           String(value).length === String(currentNum).length &&

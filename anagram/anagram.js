@@ -7,8 +7,8 @@ class Anagram {
     let matches = [];
 
     arrWords.forEach((otherWord) => {
-      let other = [...otherWord.toLowerCase()].sort().join("");
-      let compareWord = [...this.word.toLowerCase()].sort().join("");
+      let other = this.sort(this.word);
+      let compareWord = this.sort(otherWord);
 
       if (
         compareWord === other &&
@@ -19,6 +19,10 @@ class Anagram {
     });
 
     return matches;
+  }
+
+  sort(word) {
+    return [...word.toLowerCase()].sort().join("");
   }
 }
 

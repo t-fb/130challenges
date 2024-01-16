@@ -14,8 +14,8 @@ class DNA {
       otherStrand = [...this.dna];
     }
 
-    shorterStrand.forEach((char, i) => {
-      if (char !== otherStrand[i]) {
+    shorterStrand.forEach((char, index) => {
+      if (char !== otherStrand[index]) {
         difference++;
       }
     });

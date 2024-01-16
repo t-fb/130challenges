@@ -24,9 +24,7 @@ class Scrabble {
     let totalScore = 0;
 
     currentWord.forEach((char) => {
-      let letterKey = Object.keys(Scrabble.letterIndex).find((key) =>
-        key.includes(char.toUpperCase())
-      );
+      let letterKey = this.findLetter(char);
       if (letterKey) {
         totalScore += Scrabble.letterIndex[String(letterKey)];
       }
@@ -37,6 +35,11 @@ class Scrabble {
 
   checkNull() {
     return this.word === null;
+  }
+  findLetter(char) {
+    return Object.keys(Scrabble.letterIndex).find((key) =>
+      key.includes(char.toUpperCase())
+    );
   }
 }
 
